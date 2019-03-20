@@ -4,6 +4,13 @@
       background-position: center;
     	color: white;
     	text-align:center;}
+  body{
+    widith:100%;
+    display: -wedkit-box;
+    -webkit-box-pack:vertical;
+    -webkit-box-flex: 1;
+
+  }
 
 .nav ul > li{float: right;
   					display: inline;
@@ -13,7 +20,7 @@
             border: :1px solid transparent;
             transition: 0.6s;
             font-size: 24px;
-            
+
 
             }
 .nav a:link, a:visited {
