@@ -7,8 +7,8 @@
   body{
     widith:100%;
     display: -wedkit-box;
-    -webkit-box-pack:vertical;
-    -webkit-box-flex: 1;
+    -moz-box-pack:vertical;
+    -moz-box-flex: 1;
 
   }
 
@@ -45,8 +45,8 @@
 .pic img{width: 290px;
           height: 220px;
           align:center;
+          border-radius: 18%
          }
-
 
 .About{text-align: justify center;
         }
