@@ -42,11 +42,16 @@
 .front{padding-top: 120px;
         margin-top: 20px}
 
-.pic img{width: 290px;
-          height: 220px;
+.pic img{width: 100px;
+          height: 100px;
           align:center;
-          border-radius: 18%
+          border-radius: 18%;
+          -webkit-transition: height 2.5s,width 2.5s;
+          transition: height 2.5s, width 2.5s 
          }
+  .pic img:hover{height: 300px;
+                width: 345px
+              }
 
 .About{text-align: justify center;
         }
