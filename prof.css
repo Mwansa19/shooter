@@ -46,17 +46,74 @@
           height: 100px;
           align:center;
           border-radius: 18%;
-          -webkit-transition: height 2.5s,width 2.5s;
-          transition: height 2.5s, width 2.5s 
+          -webkit-transition: height 2.5s,width 2.5s,-webkit-transform 2s;
+          transition: height 2.5s, width 2.5s,transform 2s;
+          transition-delay: 0.5s;
+          
          }
   .pic img:hover{height: 300px;
-                width: 345px
+                width: 345px;
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
               }
+/*------Word animation slider-----*/
+.slider h1
+{
+  animation-duration: 5.5s;
+  animation-name: slidein;
+  animation-iteration-count: 3;
+  animation-direction: alternate-reverse;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+}
+.slider p
+{
+  animation-duration: 7s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+}
 
 .About{text-align: justify center;
         }
-.About h2:hover{text-transition: 0.5s;
-                  }
+.About h2
+{
+  animation-duration: 9s;
+  animation-name: slidein;
+}
+@keyframes About h2 {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+}
+
 #Chupa p > a :hover, a : active{color: darkblue;
               }
 
