@@ -23,23 +23,15 @@
 		</header>
 
     <br>
-
-    <div class="front">
-        <div class="pic">
-          <img src="images/SAM_0091.JPG">
-        </div>
-        <div class="slider">
-          <h1>Web Development Awesomeness</h1>
-          <p>Handcrafted Design For The Digital World.</p>
-        </div>
+    <div class="pic">
+      <img src="images/SAM_0091.JPG">
     </div>
-
+    <div id="typedtext"></div>
     <br>
     <br>
-
     <div class="About">
         <h2>Design.<br> Development.<br> Products.</h2>
-        <h3 id="Chupa">About Mwansa Chupa</h3>
+        <h3 >About Mwansa Chupa</h3>
         <p>My name is Mwansa Chupa. I am a Zambian Developer-"Beginner" focusing on <br>Responsive Web Design & Web Development.</p>
         <p>I am currently doing Web Development at <a href="#">Hackers Guild</a> in Lusaka since February 2019. </p>
         <p>When I am not writing code, I spend as much time as I can with my family who are always<br>  there for me and motivate me to do my best, and I
@@ -47,13 +39,51 @@
         <p>You can follow me on <a href="#">Twitter</a>, stalk me on <a href="#">Facebook</a> or just send me an <a href="#">Email</a>.</p>
     </div>
 
-  </br>
-  </br>
-  </br>
-
+    </br>
     <div id="footer">
 			<p>&copy; 2019 Mwansa Chupa. All rights reserved.</p>
 			</div>
+      <script type="text/javascript">
+              // / set up text to print, each item in array is new line
+        var aText = new Array(
+        "  Web Development Awesomeness:",
+        "  Handcrafted Design For The Digital World."
+        );
+        var iSpeed = 100; // time delay of print out
+        var iIndex = 0; // start printing array at this posision
+        var iArrLength = aText[0].length; // the length of the text array
+        var iScrollAt = 20; // start scrolling up at this many lines
 
+        var iTextPos = 0; // initialise text position
+        var sContents = ''; // initialise contents variable
+        var iRow; // initialise current row
+
+        function typewriter()
+        {
+        sContents =  ' ';
+        iRow = Math.max(0, iIndex-iScrollAt);
+        var destination = document.getElementById("typedtext");
+
+        while ( iRow < iIndex ) {
+        sContents += aText[iRow++] + '<br />';
+        }
+        destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+        if ( iTextPos++ == iArrLength ) {
+        iTextPos = 0;
+        iIndex++;
+        if ( iIndex != aText.length ) {
+         iArrLength = aText[iIndex].length;
+         setTimeout("typewriter()", 500);
+        }
+        } else {
+        setTimeout("typewriter()", iSpeed);
+        }
+        }
+
+
+        typewriter();
+
+
+      </script>
   </body>
 </html>
